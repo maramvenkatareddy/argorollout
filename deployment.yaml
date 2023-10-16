@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: superapi
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
       app: superapi
@@ -22,3 +22,5 @@ spec:
       activeService: superapi-svc-active
       previewService: superapi-svc-preview
       autoPromotionEnabled: false
+      previewReplicaCount: 2
+      
