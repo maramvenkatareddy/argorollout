@@ -11,10 +11,11 @@ spec:
     metadata:
       labels:
         app: superapi
+        track: 1.0
     spec:
       containers:
       - name: superapi
-        image: venkatareddy3533/ver:2.0.0
+        image: venkatareddy3533/ver:1.0.0
         ports:
         - containerPort: 80
   strategy:
