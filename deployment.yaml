@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: superapi
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: superapi
+  template:
+    metadata:
+      labels:
+        app: superapi
+    spec:
+      containers:
+      - name: superapi
+        image: venkatareddy3533/ver:1.0.0
+        ports:
+        - containerPort: 80
+  strategy:
+    blueGreen:
+      activeService: superapi-svc-active
+      previewService: superapi-svc-preview
+      autoPromotionEnabled: false
