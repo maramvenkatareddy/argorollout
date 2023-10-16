@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: superapi
-    track: 1.0
+    track: active
   type: NodePort
   ports:
   - name: http
@@ -21,7 +21,7 @@ metadata:
 spec:
   selector:
     app: superapi
-    track: 2.0
+    track: preview
   type: NodePort
   ports:
   - name: http
