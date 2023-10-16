@@ -23,4 +23,5 @@ spec:
       previewService: superapi-svc-preview
       autoPromotionEnabled: false
       previewReplicaCount: 2
+      abortScaleDownDelaySeconds: 0
       
